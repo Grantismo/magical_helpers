@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<style type="text/css">
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
+</style>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+<div class="container">
+    <h1>MagicalHelper (name pending)</h1>
+    <div class="row">
+        <div class="span12">
+                    <h2>btn-group</h2>
+
+            <div class="btn-group">
+                <a href='/apple' class="btn">Apple</a>
+                <a href='/potato' class="btn">Potato</a>
+                <a href='/milk' class="btn btn-primary">Milk</a>
+             </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <pre class="span5">
+&lt;div class=&quot;btn-group&quot;&gt;<br/>   &lt;a href='/apple' class=&quot;btn&quot;&gt;Apple&lt;/a&gt;<br/>   &lt;a href='/potato' class=&quot;btn&quot;&gt;Potato&lt;/a&gt;<br/>   &lt;a href='/milk' class=&quot;btn btn-primary &quot;&gt;Milk&lt;/a&gt;<br/>&lt;/div&gt;
+        </pre >
+
+        <pre class="span5">
+#col = {"Apple": "/apple", 
+       "Potato": "/potato", 
+       "Milk": "/milk"} 
+#
+#  or 
+col = Food.all
+&lt;%= collection col, :btn-group, selected: :last %&gt;
+        </pre>
+    </div>
+     <div class="row">
+        <div class="span12">
+                    <h2>nav-tab</h2>
+
+          <ul class="nav nav-tabs">
+  <li><a href="/apple">Apple</a></li>
+  <li><a href="/potato">Potato</a></li>
+  <li class="active"><a href="/milk">Milk</a></li>
+</ul>
+        </div>
+    </div>
+    <div class="row">
+        <pre class="span5">
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;<br/>  &lt;li&gt;&lt;a href=&quot;/apple&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;a href=&quot;/potato&quot;&gt;Potato&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li class=&quot;active &quot;&gt;&lt;a href=&quot;/milk&quot;&gt;Milk&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;
+        </pre >
+
+        <pre class="span5">
+&lt;%= collection col, :nav-tabs, selected: :last %&gt;
+        </pre>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h2>pills</h2>
+
+          <ul class="nav nav-pills">
+            <li><a href="/apple">Apple</a></li>
+            <li><a href="/potato">Potato</a></li>
+            <li class="active"><a href="/milk">Milk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <pre class="span5">
+&lt;ul class=&quot;nav nav-pills&quot;&gt;<br/>  &lt;li&gt;&lt;a href=&quot;/apple&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;a href=&quot;/potato&quot;&gt;Potato&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/milk&quot;&gt;Milk&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;
+        </pre >
+
+        <pre class="span5">
+@milk = Food.find_by_name("milk")
+&lt;%= collection col, :nav-pils, selected: @milk %&gt;
+        </pre>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h2>navbar</h2>
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+            <li><a href="/apple">Apple</a></li>
+            <li><a href="/potato">Potato</a></li>
+            <li class="active"><a href="/milk">Milk</a></li>
+    </ul>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <pre class="span5">
+&lt;div class=&quot;navbar&quot;&gt;<br/>  &lt;div class=&quot;navbar-inner&quot;&gt;<br/>    &lt;ul class=&quot;nav&quot;&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/apple&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/potato&quot;&gt;Potato&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/milk&quot;&gt;Milk&lt;/a&gt;&lt;/li&gt;<br/>    &lt;/ul&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+        </pre >
+
+        <pre class="span5">
+&lt;%= collection col, :navbar, selected: @milk  %&gt;
+        </pre>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <h2>labels</h2>
+
+<span class="label">Apple</span>
+<span class="label">Potato</span>
+<span class="label label-info">Milk</span>
+<br />
+<br />
+        </div>
+      </div>
+      <div class="row">
+        <pre class="span5">
+&lt;span class=&quot;label&quot;&gt;Apple&lt;/span&gt;<br/>&lt;span class=&quot;label&quot;&gt;Potato&lt;/span&gt;<br/>&lt;span class=&quot;label label-info&quot;&gt;Milk&lt;/span&gt;<br/>
+        </pre >
+
+        <pre class="span5">
+&lt;%= collection col, :label, selected: :last  %&gt;
+        </pre>
+      </div>
+
+
+      <div class="row">
+        <div class="span12">
+          <h2>table</h2>
+<table class="table">
+<tr>
+  <th>Name</th>
+  <th>Link</th>
+</tr>
+<tr>
+  <th>Apple</th>
+  <th><a href="/apple">Link</a></th>
+</tr>
+<tr>
+  <th>Potato</th>
+  <th><a href="/potato">Link</a></th>
+</tr>
+<tr>
+  <th>Milk</th>
+  <th><a href="/milk">Link</a></th>
+</tr>
+</table>
+<br />
+<br />
+        </div>
+      </div>
+      <div class="row">
+        <pre class="span5">
+&lt;table class=&quot;table&quot;&gt;<br/>&lt;tr&gt;<br/>  &lt;th&gt;Name&lt;/th&gt;<br/>  &lt;th&gt;Link&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>  &lt;th&gt;Apple&lt;/th&gt;<br/>  &lt;th&gt;&lt;a href=&quot;/apple&quot;&gt;Link&lt;/a&gt;&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>  &lt;th&gt;Potato&lt;/th&gt;<br/>  &lt;th&gt;&lt;a href=&quot;/potato&quot;&gt;Link&lt;/a&gt;&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>  &lt;th&gt;Milk&lt;/th&gt;<br/>  &lt;th&gt;&lt;a href=&quot;/milk&quot;&gt;Link&lt;/a&gt;&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/table&gt;
+        </pre >
+
+        <pre class="span5">
+&lt;%= collection col, :table, rows: [:name, :link]  %&gt;
+        </pre>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <h2>links</h2>
+
+  <a href="/apple">Apple</a> |
+  <a href="/potato">Potato</a> |
+  <a href="/milk" class="text-success">Milk</a>
+
+<br />
+<br />
+        </div>
+      </div>
+      <div class="row">
+        <pre class="span5">
+&lt;a href=&quot;/apple&quot;&gt;Apple&lt;/a&gt; |
+&lt;a href=&quot;/potato&quot;&gt;Potato&lt;/a&gt; | 
+&lt;a href=&quot;/milk&quot; class=&quot;text-success&quot;&gt;Milk&lt;/a&gt;
+        </pre >
+
+        <pre class="span5">
+&lt;%= collection col, :a, selected: :is_dairy?, separator: "|" %&gt;
+        </pre>
+      </div>
+
+    </div> <!-- container -- >
+  </body>
+</html>
+
