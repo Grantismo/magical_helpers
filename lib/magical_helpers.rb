@@ -1,0 +1,1 @@
+require 'magical_helpers/railtie' if defined?(Rails)
